@@ -13,6 +13,7 @@ namespace teste
         public DateTime DataCriacao { get; set; }
         public decimal VerbaLiberada { get; set; }
         public int AnoVerbaLiberada { get; set; }
+        private decimal custoReal;
 
         public CentroDeCusto
             (int Id,
@@ -26,6 +27,11 @@ namespace teste
             DataCriacao = dataCriacao;
             VerbaLiberada= verbaLiberada;  
             AnoVerbaLiberada= anoVerbaLiberada;
+        }
+        public void CalcularCustoReal(decimal custoRealNovo)
+        {
+custoReal= custoRealNovo;
+            Console.WriteLine($"O novo custo real do centro de custo {Descricao}, com id {Id} é {custoReal}");
         }
 
 
